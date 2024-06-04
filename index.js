@@ -26,7 +26,9 @@ app.use((req, res, next) => {
     next();
   } else {
     // Block direct IP access
-    res.status(403).json({ error: 'Forbidden - Direct IP access is not allowed' });
+   res.status(403).json({ error: 'Forbidden - Direct IP access is not allowed' });
+   //next();
+
   }
 });
 const apiModules = [
